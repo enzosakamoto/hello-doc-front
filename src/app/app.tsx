@@ -110,7 +110,7 @@ export function App() {
       <main className="flex h-screen w-full flex-col items-center justify-center gap-6 font-geist">
         {!videoInfo ? (
           <>
-            <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+            <h1 className="text-center text-2xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
               Enter a Youtube URL
             </h1>
             <Form {...form}>
@@ -122,7 +122,7 @@ export function App() {
                   control={form.control}
                   name="url"
                   render={({ field }) => (
-                    <FormItem className="w-2/5">
+                    <FormItem className="w-2/5 min-w-48">
                       <FormControl>
                         <Input
                           placeholder="https://youtu.be/zG5gWncAhls?si=DqMkerSQYtxIaios"
@@ -141,7 +141,7 @@ export function App() {
             </Form>
           </>
         ) : (
-          <Card>
+          <Card className="w-4/5 md:w-3/5">
             <CardHeader>
               <CardTitle>{videoInfo?.title}</CardTitle>
               <CardDescription>{videoInfo?.author}</CardDescription>
@@ -152,8 +152,7 @@ export function App() {
                   videoInfo?.embedUrl ||
                   `https://youtube.com/embed/${form.getValues().url.split('/')[form.getValues().url.split('/').length - 1]}`
                 }
-                width={560}
-                height={315}
+                className="h-60 w-full md:h-96"
               />
               <Separator />
             </CardContent>
