@@ -17,10 +17,7 @@ export function Navbar() {
     <nav className="fixed left-0 top-0 z-50 flex w-full border-b-[1px] border-gray-300 p-2 px-12 font-geist">
       <div className="absolute left-0 top-0 -z-10 h-full w-full bg-background/30 backdrop-blur-md"></div>
       <div className="flex w-full items-center justify-between">
-        <a
-          href="/"
-          className="scroll-m-20 text-xl font-extrabold tracking-tight lg:text-xl"
-        >
+        <a href="/" className="text-lg font-bold sm:text-xl">
           Hello Doc
         </a>
         <DropdownMenu>

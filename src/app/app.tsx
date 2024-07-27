@@ -107,10 +107,10 @@ export function App() {
   return (
     <>
       <Navbar />
-      <main className="flex h-screen w-full flex-col items-center justify-center gap-6 font-geist">
+      <main className="flex h-screen w-full flex-col items-center justify-center gap-6 overflow-x-hidden font-geist">
         {!videoInfo ? (
           <>
-            <h1 className="text-center text-2xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
+            <h1 className="text-center text-2xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
               Enter a Youtube URL
             </h1>
             <Form {...form}>
