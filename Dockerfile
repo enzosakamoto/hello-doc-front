@@ -11,6 +11,7 @@ RUN npm run build
 FROM nginx:stable-alpine
 COPY --from=builder /app/dist /usr/share/nginx/html
 COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
+COPY letsencrypt /etc/letsencrypt/live/hello-doc.enzosakamoto.com.br
 
-EXPOSE 80
+EXPOSE 80 443
 CMD ["nginx", "-g", "daemon off;"]
